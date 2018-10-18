@@ -28,7 +28,7 @@ fi
 
 # not docker image exists or force then build docker
 if ! docker images | grep fudyartanto/$DOCKER_NAME || $FORCE; then
-  docker build -t fudyartanto/$DOCKER_NAME .
+  docker build -t fudyartanto/$DOCKER_NAME:php-7.2 .
 fi
 
-# docker run -tid -p 8080:80 --name $DOCKER_NAME fudyartanto/$DOCKER_NAME
+# docker run -tid -p 8080:80 --name $DOCKER_NAME fudyartanto/$DOCKER_NAME:php-7.2
